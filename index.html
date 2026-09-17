@@ -63,13 +63,14 @@
 <body>
 <main>
   <h1>OneSport Privacy Policy</h1>
-  <p class="meta">Last updated: September 10, 2026</p>
+  <p class="meta">Last updated: September 17, 2026</p>
 
   <div class="status">
     <strong>Status: draft.</strong> This reflects what the OneSport app actually
-    does today, now that real accounts (phone sign-in) and cloud-synced
-    favorites/bookings are live. See &ldquo;What happens next&rdquo; below for
-    what's still not covered.
+    does today, now that real accounts (phone sign-in), cloud-synced
+    favorites/bookings/plan, onboarding profile data (name, fitness goal), and
+    membership transfer/sale/referral features are live. See &ldquo;What
+    happens next&rdquo; below for what's still not covered.
   </div>
 
   <h2>Who this covers</h2>
@@ -90,10 +91,18 @@
   </p>
   <ul>
     <li>Your <strong>phone number</strong>, linked to your account.</li>
+    <li>The <strong>display name</strong> and <strong>fitness goal</strong> (e.g.
+      lose weight, build muscle) you provide during onboarding, or later edit
+      from your profile. Both are optional to fill in truthfully &mdash; we
+      don't verify them.</li>
     <li>The <strong>gyms and classes you mark as favorites</strong>.</li>
     <li>Your <strong>booking history</strong> (which class/gym visit, and when).</li>
     <li>Your <strong>purchased pass plan</strong>, if any (currently cosmetic
-      &mdash; see &ldquo;Payments&rdquo; below; no real payment is processed yet).</li>
+      &mdash; see &ldquo;Payments&rdquo; below; no real payment is processed yet),
+      and, if you freeze it, the date it's frozen until.</li>
+    <li>A <strong>referral code</strong> we generate for your account, whether
+      you've <strong>redeemed someone else's referral code</strong> (each
+      account can redeem one), and any bonus days credited from that.</li>
   </ul>
   <p>
     This data is stored in <strong>Cloud Firestore</strong> (also a Google/Firebase
@@ -101,9 +110,35 @@
     your account so it's available across devices when you sign in with the same
     phone number. It is protected by database security rules so that only your
     own signed-in account can read or write it &mdash; not other users, and not
-    the public.
+    the public &mdash; <strong>except where described in &ldquo;Data visible to
+    other users&rdquo; below.</strong>
   </p>
-  <p>We do not collect your name, email, contacts, photos, or payment details.</p>
+  <p>We do not collect your email, contacts, photos, or payment details.</p>
+
+  <h3>Data visible to other users</h3>
+  <p>
+    A few features are inherently things you do <em>with</em> another OneSport
+    user, so a limited amount of data crosses accounts:
+  </p>
+  <ul>
+    <li><strong>Membership transfer and sale.</strong> If you send, receive, or
+      list a membership for transfer, your <strong>phone number</strong>
+      becomes visible to the other party involved in that specific transfer
+      (and vice versa) &mdash; this is how the app resolves a phone number to
+      the right account and shows you who you're transacting with. A
+      membership listed for sale is visible, along with your phone number, to
+      any other signed-in user browsing the marketplace, until you cancel that
+      listing.</li>
+    <li><strong>Referral codes.</strong> Your referral code, on its own, is
+      designed to be shared by you (e.g. via the app's own share sheet) and
+      entered by someone else &mdash; that's how it's meant to work. It is
+      stored in a way any signed-in account can look up, so a code can be
+      matched back to your account when someone redeems it.</li>
+  </ul>
+  <p>
+    We do not otherwise make your profile, favorites, bookings, or booking
+    history visible to other users.
+  </p>
 
   <h3>On-device only, never sent anywhere</h3>
   <ul>
@@ -154,9 +189,10 @@
 
   <h2>Data retention &amp; deletion</h2>
   <p>
-    Your account data (phone number, favorites, bookings, plan) is retained for
-    as long as your account exists. <strong>There is no self-service &ldquo;delete
-    my account&rdquo; option in the app yet.</strong> To request deletion of your
+    Your account data (phone number, display name, fitness goal, favorites,
+    bookings, plan, referral/promo data) is retained for as long as your
+    account exists. <strong>There is no self-service &ldquo;delete my
+    account&rdquo; option in the app yet.</strong> To request deletion of your
     account and all associated data, contact us at
     <a href="mailto:domicabduganiev@gmail.com">domicabduganiev@gmail.com</a> from
     the phone number associated with your account (or otherwise confirming you're
@@ -165,10 +201,10 @@
   </p>
   <p>
     Uninstalling the app removes your local theme/language settings but does
-    <strong>not</strong> delete your account data from Firestore &mdash; your
-    phone number, favorites, and bookings remain until you request deletion as
-    above (this is because account data lets you sign back in on a new device
-    and pick up where you left off).
+    <strong>not</strong> delete your account data from Firestore &mdash;
+    everything listed under &ldquo;Account data&rdquo; above remains until you
+    request deletion as above (this is because account data lets you sign back
+    in on a new device and pick up where you left off).
   </p>
 
   <h2>Children's privacy</h2>
@@ -186,6 +222,11 @@
       payment processor), and how it's secured, before that ships.</li>
     <li><strong>In-app self-service account deletion</strong> &mdash; until
       built, deletion stays a manual email request as described above.</li>
+    <li><strong>Real avatar photo upload</strong> &mdash; not yet built; this
+      policy will cover photo storage/visibility when it ships.</li>
+    <li><strong>Two-sided referral crediting</strong> (currently only the
+      person redeeming a code is credited) &mdash; if that changes, this
+      section will describe what, if anything, the other side is shown.</li>
     <li><strong>Any analytics/crash-reporting tools</strong>, if added.</li>
   </ul>
 

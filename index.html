@@ -63,14 +63,15 @@
 <body>
 <main>
   <h1>OneSport Privacy Policy</h1>
-  <p class="meta">Last updated: September 17, 2026</p>
+  <p class="meta">Last updated: October 14, 2026</p>
 
   <div class="status">
     <strong>Status: draft.</strong> This reflects what the OneSport app actually
     does today, now that real accounts (phone sign-in), cloud-synced
-    favorites/bookings/plan, onboarding profile data (name, fitness goal), and
-    membership transfer/sale/referral features are live. See &ldquo;What
-    happens next&rdquo; below for what's still not covered.
+    favorites/bookings/plan, onboarding profile data (name, goal, target and
+    timeframe), referral codes, an on-device profile photo, and in-app account
+    deletion are live. See &ldquo;What happens next&rdquo; below for what's
+    still not covered.
   </div>
 
   <h2>Who this covers</h2>
@@ -91,10 +92,15 @@
   </p>
   <ul>
     <li>Your <strong>phone number</strong>, linked to your account.</li>
-    <li>The <strong>display name</strong> and <strong>fitness goal</strong> (e.g.
-      lose weight, build muscle) you provide during onboarding, or later edit
-      from your profile. Both are optional to fill in truthfully &mdash; we
-      don't verify them.</li>
+    <li>The <strong>display name</strong> you provide during onboarding, or
+      later edit from your profile.</li>
+    <li>The <strong>goal</strong> you choose when you first sign in (e.g. lose
+      weight, build muscle, grow taller, or a goal you write in your own
+      words), its <strong>target</strong> if it has one (e.g. 15&nbsp;kg or
+      5&nbsp;cm), and the <strong>timeframe</strong> you give yourself (e.g. 1
+      month). We don't verify any of these, and you don't have to share
+      anything you'd rather not &mdash; a goal can be as general as &ldquo;stay
+      fit&rdquo;.</li>
     <li>The <strong>gyms and classes you mark as favorites</strong>.</li>
     <li>Your <strong>booking history</strong> (which class/gym visit, and when).</li>
     <li>Your <strong>purchased pass plan</strong>, if any (currently cosmetic
@@ -113,22 +119,18 @@
     the public &mdash; <strong>except where described in &ldquo;Data visible to
     other users&rdquo; below.</strong>
   </p>
-  <p>We do not collect your email, contacts, photos, or payment details.</p>
+  <p>
+    We do not collect your email, contacts, or payment details. Your profile
+    photo, if you add one, stays on your device &mdash; see &ldquo;On-device
+    only&rdquo; below.
+  </p>
 
   <h3>Data visible to other users</h3>
   <p>
-    A few features are inherently things you do <em>with</em> another OneSport
+    One feature is inherently something you do <em>with</em> another OneSport
     user, so a limited amount of data crosses accounts:
   </p>
   <ul>
-    <li><strong>Membership transfer and sale.</strong> If you send, receive, or
-      list a membership for transfer, your <strong>phone number</strong>
-      becomes visible to the other party involved in that specific transfer
-      (and vice versa) &mdash; this is how the app resolves a phone number to
-      the right account and shows you who you're transacting with. A
-      membership listed for sale is visible, along with your phone number, to
-      any other signed-in user browsing the marketplace, until you cancel that
-      listing.</li>
     <li><strong>Referral codes.</strong> Your referral code, on its own, is
       designed to be shared by you (e.g. via the app's own share sheet) and
       entered by someone else &mdash; that's how it's meant to work. It is
@@ -136,15 +138,30 @@
       matched back to your account when someone redeems it.</li>
   </ul>
   <p>
-    We do not otherwise make your profile, favorites, bookings, or booking
-    history visible to other users.
+    We do not otherwise make your profile, goal, favorites, bookings, or
+    booking history visible to other users.
+  </p>
+  <p>
+    <strong>Membership transfers</strong> to another person are handled by our
+    operator by phone, not inside the app. When you call, the operator sees your
+    phone number and the recipient's number you give them, and uses them only
+    to carry out that transfer. (An earlier version of the app had an in-app
+    transfer and a membership marketplace that showed your phone number to the
+    other party or to marketplace visitors; both have been removed.)
   </p>
 
   <h3>On-device only, never sent anywhere</h3>
   <ul>
-    <li><strong>Theme (light/dark) and language</strong> (Uzbek/Russian/English)
-      &mdash; stored locally via Android's DataStore. Not linked to your account,
-      not transmitted anywhere, deleted automatically if you uninstall the app.</li>
+    <li><strong>Theme (light/dark), language</strong> (Uzbek/Russian/English),
+      and your <strong>notification and sound settings</strong> &mdash; stored
+      locally via Android's DataStore. Not linked to your account, not
+      transmitted anywhere, deleted automatically if you uninstall the app.</li>
+    <li><strong>Profile photo</strong>, if you add one &mdash; you pick it with
+      Android's own photo picker, which gives the app access to that one photo
+      only. A resized copy is saved in the app's private storage on your phone
+      and is <strong>never uploaded</strong>, so it won't appear if you sign in
+      on another device. You can remove it at any time from your profile; it's
+      also deleted when you delete your account or uninstall the app.</li>
     <li><strong>Approximate city</strong>, if you grant location permission
       &mdash; used only to show which city you're in on the Home screen (e.g.
       &ldquo;Tashkent&rdquo;). This is resolved entirely on your device (coarse
@@ -167,6 +184,10 @@
     <li><strong>Coarse location</strong> (optional) &mdash; used only for the
       on-device city label described above. You can deny it; the app still works.</li>
   </ul>
+  <p>
+    Adding a profile photo doesn't need a storage permission: Android's photo
+    picker only shares the single photo you choose.
+  </p>
 
   <h2>Third parties / data processors</h2>
   <p>
@@ -182,29 +203,41 @@
   <h2>Payments</h2>
   <p>
     OneSport does not currently process real payments. The pass/plan purchase
-    flow in the app is cosmetic &mdash; selecting a plan does not charge you or
-    move any money. This will be updated here, in detail, before any real payment
-    processing (e.g. Payme or Click) goes live.
+    flow in the app is cosmetic &mdash; selecting a plan or a payment method
+    (bank card, Uzum, Click, Payme, Paynet) does not charge you, move any money,
+    or send anything to those providers, and the payment method you pick isn't
+    stored. This will be updated here, in detail, before any real payment
+    processing goes live.
   </p>
 
-  <h2>Data retention &amp; deletion</h2>
+  <h2 id="deletion">Data retention &amp; deletion</h2>
   <p>
-    Your account data (phone number, display name, fitness goal, favorites,
-    bookings, plan, referral/promo data) is retained for as long as your
-    account exists. <strong>There is no self-service &ldquo;delete my
-    account&rdquo; option in the app yet.</strong> To request deletion of your
-    account and all associated data, contact us at
+    Your account data (phone number, display name, goal, favorites, bookings,
+    plan, referral/promo data) is retained for as long as your account exists.
+  </p>
+  <p>
+    <strong>You can delete your account yourself in the app:</strong> Profile
+    &rarr; Settings &rarr; Delete account. This permanently deletes your account
+    and your profile, goal, favorites, bookings, plan, referral code, any
+    membership listings from the earlier marketplace, and your on-device
+    profile photo. For security, you may be asked to sign in again first if you
+    haven't recently.
+  </p>
+  <p>
+    If you can't use the app, you can also request deletion by contacting us at
     <a href="mailto:domicabduganiev@gmail.com">domicabduganiev@gmail.com</a> from
     the phone number associated with your account (or otherwise confirming you're
     the account holder), and we will delete it. We aim to complete deletion
     requests within a reasonable time and will let you know once it's done.
+    Records of transfers made with the earlier in-app transfer feature involve
+    another person's account too and aren't removed automatically; contact us
+    if you'd like them deleted.
   </p>
   <p>
-    Uninstalling the app removes your local theme/language settings but does
-    <strong>not</strong> delete your account data from Firestore &mdash;
-    everything listed under &ldquo;Account data&rdquo; above remains until you
-    request deletion as above (this is because account data lets you sign back
-    in on a new device and pick up where you left off).
+    Uninstalling the app removes your local settings and profile photo but does
+    <strong>not</strong> delete your account data from Firestore &mdash; use
+    &ldquo;Delete account&rdquo; for that (account data is kept otherwise so you
+    can sign back in on a new device and pick up where you left off).
   </p>
 
   <h2>Children's privacy</h2>
@@ -217,13 +250,13 @@
   <h2>What happens next</h2>
   <p>Still to be covered here once built:</p>
   <ul>
-    <li><strong>Real payment processing</strong> (Payme/Click) &mdash; full
-      detail on what payment data is collected, who it's shared with (the
-      payment processor), and how it's secured, before that ships.</li>
-    <li><strong>In-app self-service account deletion</strong> &mdash; until
-      built, deletion stays a manual email request as described above.</li>
-    <li><strong>Real avatar photo upload</strong> &mdash; not yet built; this
-      policy will cover photo storage/visibility when it ships.</li>
+    <li><strong>Real payment processing</strong> (bank cards, Uzum, Click,
+      Payme, Paynet) &mdash; full detail on what payment data is collected, who
+      it's shared with (the payment processor), and how it's secured, before
+      that ships.</li>
+    <li><strong>Cloud sync of profile photos</strong>, if added &mdash; this
+      policy will cover photo storage/visibility before photos leave your
+      device.</li>
     <li><strong>Two-sided referral crediting</strong> (currently only the
       person redeeming a code is credited) &mdash; if that changes, this
       section will describe what, if anything, the other side is shown.</li>

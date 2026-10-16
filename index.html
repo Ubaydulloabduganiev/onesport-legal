@@ -63,14 +63,15 @@
 <body>
 <main>
   <h1>OneSport Privacy Policy</h1>
-  <p class="meta">Last updated: October 14, 2026</p>
+  <p class="meta">Last updated: October 16, 2026</p>
 
   <div class="status">
     <strong>Status: draft.</strong> This reflects what the OneSport app actually
     does today, now that real accounts (phone sign-in), cloud-synced
-    favorites/bookings/plan, onboarding profile data (name, goal, target and
-    timeframe), referral codes, an on-device profile photo, and in-app account
-    deletion are live. See &ldquo;What happens next&rdquo; below for what's
+    favorites/bookings/plan, onboarding profile data (name, date of birth, sex,
+    height, weight, goal, target and timeframe), client IDs, referral codes,
+    membership dates and freezes, an on-device profile photo, an on-device PIN /
+    fingerprint / face lock, and in-app account deletion are live. See &ldquo;What happens next&rdquo; below for what's
     still not covered.
   </div>
 
@@ -94,6 +95,19 @@
     <li>Your <strong>phone number</strong>, linked to your account.</li>
     <li>The <strong>display name</strong> you provide during onboarding, or
       later edit from your profile.</li>
+    <li>What you tell us <strong>about yourself</strong> when you first sign in,
+      and can edit later from your profile: your <strong>date of birth</strong>
+      (we show your age from it, and use it to check you're old enough to use
+      OneSport &mdash; see &ldquo;Children's privacy&rdquo;), your
+      <strong>sex</strong> (optional &mdash; you can choose &ldquo;prefer not to
+      say&rdquo;), and your <strong>height</strong> and <strong>weight</strong>.
+      These are used only to personalize the app for you, are never shown to
+      other users, and are not medical records &mdash; we don't verify them.</li>
+    <li>A <strong>client ID</strong>: an 8-digit number we assign to your
+      account so the gym front desk or our operator can identify you (it's shown
+      on your profile and pass card). A separate lookup record makes sure no two
+      accounts get the same number; it contains only the ID and your account's
+      internal ID.</li>
     <li>The <strong>goal</strong> you choose when you first sign in (e.g. lose
       weight, build muscle, grow taller, or a goal you write in your own
       words), its <strong>target</strong> if it has one (e.g. 15&nbsp;kg or
@@ -104,8 +118,10 @@
     <li>The <strong>gyms and classes you mark as favorites</strong>.</li>
     <li>Your <strong>booking history</strong> (which class/gym visit, and when).</li>
     <li>Your <strong>purchased pass plan</strong>, if any (currently cosmetic
-      &mdash; see &ldquo;Payments&rdquo; below; no real payment is processed yet),
-      and, if you freeze it, the date it's frozen until.</li>
+      &mdash; see &ldquo;Payments&rdquo; below; no real payment is processed yet):
+      which plan, when it started, and &mdash; if you freeze it &mdash; the date
+      it's frozen until, whether this plan's one freeze has been used, and the
+      extra time added to its end date so frozen days aren't lost.</li>
     <li>A <strong>referral code</strong> we generate for your account, whether
       you've <strong>redeemed someone else's referral code</strong> (each
       account can redeem one), and any bonus days credited from that.</li>
@@ -156,6 +172,13 @@
       and your <strong>notification and sound settings</strong> &mdash; stored
       locally via Android's DataStore. Not linked to your account, not
       transmitted anywhere, deleted automatically if you uninstall the app.</li>
+    <li><strong>App lock (PIN, fingerprint or face)</strong>, if you turn it on.
+      Your PIN is never stored as-is &mdash; only a salted, one-way hash of it,
+      kept in the app's private storage on your phone; it's never uploaded, and
+      it's removed when you log out, delete your account, or uninstall the app.
+      Fingerprint and face unlock are handled entirely by Android: the app only
+      learns whether the check succeeded and <strong>never receives your
+      fingerprint or face data</strong>.</li>
     <li><strong>Profile photo</strong>, if you add one &mdash; you pick it with
       Android's own photo picker, which gives the app access to that one photo
       only. A resized copy is saved in the app's private storage on your phone
@@ -186,7 +209,8 @@
   </ul>
   <p>
     Adding a profile photo doesn't need a storage permission: Android's photo
-    picker only shares the single photo you choose.
+    picker only shares the single photo you choose. Fingerprint / face unlock
+    uses Android's biometric prompt, which needs no extra permission from you.
   </p>
 
   <h2>Third parties / data processors</h2>
@@ -212,15 +236,17 @@
 
   <h2 id="deletion">Data retention &amp; deletion</h2>
   <p>
-    Your account data (phone number, display name, goal, favorites, bookings,
-    plan, referral/promo data) is retained for as long as your account exists.
+    Your account data (phone number, display name, date of birth, sex, height,
+    weight, goal, client ID, favorites, bookings, plan and freeze, referral/promo
+    data) is retained for as long as your account exists.
   </p>
   <p>
     <strong>You can delete your account yourself in the app:</strong> Profile
     &rarr; Settings &rarr; Delete account. This permanently deletes your account
-    and your profile, goal, favorites, bookings, plan, referral code, any
-    membership listings from the earlier marketplace, and your on-device
-    profile photo. For security, you may be asked to sign in again first if you
+    and your profile (including date of birth, sex, height and weight), goal,
+    client ID, favorites, bookings, plan, referral code, any membership listings
+    from the earlier marketplace, your on-device profile photo, and your app
+    lock. For security, you may be asked to sign in again first if you
     haven't recently.
   </p>
   <p>
@@ -242,8 +268,10 @@
 
   <h2>Children's privacy</h2>
   <p>
-    OneSport is not directed at children. We do not knowingly collect personal
-    information from children. If we learn that a child's account data has been
+    OneSport is for people <strong>aged 14 and older</strong>. When you first
+    sign in, the app asks for your date of birth and doesn't let you continue if
+    you're younger. We do not knowingly collect personal information from
+    children under 14. If we learn that a child's account data has been
     collected, we will delete it &mdash; contact us at the email below to report this.
   </p>
 
